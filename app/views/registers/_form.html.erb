@@ -1,0 +1,47 @@
+<%= form_for(register) do |f| %>
+  <% if register.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(register.errors.count, "error") %> prohibited this register from being saved:</h2>
+
+      <ul>
+      <% register.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Firatname %>
+    <%= f.text_field :Firatname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lastName %>
+    <%= f.text_field :lastName %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Fathername %>
+    <%= f.text_field :Fathername %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mothername %>
+    <%= f.text_field :mothername %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Email %>
+    <%= f.text_field :Email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
